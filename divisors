@@ -13,3 +13,17 @@ for i in range(user_number):
     #i increase the divisor so it can be a different number on the new loop. Outside of the loop, so in can increase despite of the if condition.
     divisor=divisor+1
 print(f'The numbers that can divide {user_number} are \n {myList}')
+
+Optimal Code:
+
+num = int(input("Please choose a number to divide: "))
+
+listRange = list(range(1,num+1))
+
+divisorList = []
+
+for number in listRange:
+    if num % number == 0:
+        divisorList.append(number)
+
+print(divisorList)
