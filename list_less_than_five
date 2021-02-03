@@ -1,0 +1,18 @@
+#We need the list from the user
+#The user should provide the number of elements the list will have
+number_list=int(input('Inser the number of items in the list: '))
+#Initialize the list empty. Probably not needed.
+myList=[]
+#The loop will append each user input to the list.
+for i in range(number_list):
+    user_list=int(input('Insert element of the list:  \n'))
+    myList.append(user_list)
+
+list5=[]
+user_number_limit=int(input('Insert the number to compare against the list items '))
+for i in myList:
+    if i<user_number_limit:
+        list5.append(i)
+
+print (f'This is the original list \n {myList}')
+print (f'This is the new list: \n {list5}')
