@@ -1,0 +1,15 @@
+#Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message to the user.
+#User needs to input the number
+user_number=int(input('Input your number: '))
+user_number2=int(input('Input a second number: '))
+#from both numbers above we make the calculations for the conditionals
+result=user_number/user_number2
+#The more conditional element goes first.
+if  (result%2==0) and (result%4==0):
+    print('Your number is an even number and a multiple of 4')
+#If the first set of conditions is not met
+elif (result%2)==0:
+    print('Your number is even')
+#Only one outcome remains
+else:
+    print ('The number is an odd number')
