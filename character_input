@@ -1,0 +1,17 @@
+#Create a program that asks the user to enter their name and their age.
+# Print out a message addressed to them that tells them the year that they will turn 100 years old.
+#import the datetime library, and use the date to take out the current date.
+from datetime import date
+#for the user to input their name. It is set to be a string.
+user_name=str(input('Inser your Name: '))
+#For the user to input their age. It is set to be an Integer.
+user_age=int(input('Insert your age: '))
+#This will tell you when you are 100 years old. Is not accurate yet. To extract the date you add .year at the end of the library invokation.
+yearOne= ((100-user_age)+date.today().year)
+print (f'Your age is {user_age} and your name is {user_name}.\n Most likely you will turn 100 years old the year {yearOne} ')
+printLines=input('How many times would you like to see the above line?  ')
+printLinesInt=int(printLines)
+print(f'{printLinesInt}')
+#To print the lines as many times as the user has input.
+for i in range(printLinesInt):
+    print  (f'Your age is {user_age} and your name is {user_name}.\n Most likely you will turn 100 years old the year {yearOne}')
