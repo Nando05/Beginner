@@ -1,0 +1,27 @@
+#Write a program that returns a list that contains only the elements that are common between the lists (without duplicates).
+# Make sure your program works on two lists of different sizes.('Insert the items of the first list')
+#The list will be generated automatically
+#Import random library to generate the numbers
+import random
+myList1=[]
+myList2=[]
+common_items=[]
+
+user_number=int(input('Insert the number of items of list 1 \n'))
+for i in range(user_number):
+    #Force numbers generated to be int
+    number_list_1=int(random.randint(1,10))
+    myList1.append(number_list_1)
+print(myList1)
+
+user_number2=int(input('Insert the number of items of list 2 \n'))
+for i in range(user_number2):
+    number_list_2=int((random.randint(1,10)))
+    myList2.append((number_list_2))
+print(myList2)
+#I iterate on the whole list
+for i in myList1:
+    #i check against the whole list, not just the item of the list. Unique values
+    if i in myList2 and i not in common_items:
+        common_items.append(i)
+print(f'The common items are {common_items}')
