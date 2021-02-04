@@ -1,0 +1,28 @@
+#Write a program that returns a list that contains only the elements that are common between the lists (without duplicates).
+# Make sure your program works on two lists of different sizes.('Insert the items of the first list')
+#I initialize all the variables
+myList1=[]
+myList2=[]
+common_items=[]
+cont='yes'
+num=0
+#Create a while loop so the user can define: the item of the list and the destination list
+while cont=='yes':
+    user_item=input('Insert the item of the list: \n')
+    user_list=input('Would this item go to list 1 or the list 2: \n')
+    if user_list=='1':
+        myList1.append(user_item)
+    else:
+        myList2.append(user_item)
+
+    cont=input('Would you like to add another item? yes/no \n')
+
+print(f'your first list is {myList1}')
+
+print(f'Your second list is {myList2}')
+#For loop so i can check all the items in myList1 (i) againts mylist2
+for i in myList1:
+    if myList2[num]==i:
+        common_items.append(i)
+    num=num+1
+print(f'The list of common items is {common_items}')
