@@ -1,0 +1,15 @@
+'''Ask the user for a string and print out whether this string is a palindrome or not.
+(A palindrome is a string that reads the same forwards and backwards.)'''
+import string
+user_word=str(input('Insert a word: '))
+print (user_word)
+user_word_reverse=[]
+empty=''
+for i in user_word[::-1]:
+    user_word_reverse.append(i)
+print(user_word_reverse)
+word_reverse=empty.join(user_word_reverse)
+if user_word==word_reverse:
+    print ('The word is a palindrome')
+else:
+    print('The word is not a Palindrome'
