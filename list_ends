@@ -1,0 +1,21 @@
+import random
+
+def first_final():
+    user_number = int(input('Insert the number of items in the list: '))
+    myList=[]
+    for i in range(0,user_number):
+        append_number=int(random.randint(1,1000))
+        myList.append((append_number))
+    print(myList)
+    print(f'The first number of the List is {myList[0]} and the last number is {myList[-1]}')
+
+first_final()
+'''
+user_number = int(input('Insert the number of items in the list: '))
+myList = []
+for i in range(0,user_number):
+    append_number=int(random.randint(1,1000))
+    myList.append((append_number))
+print(myList)
+print (f'The first number of the List is {myList[0]} and the last number is {myList[-1]}')
+'''
