@@ -1,0 +1,14 @@
+'''Write a program (function!) that takes a list and returns a new list that contains all the elements of the first list minus all the duplicates.'''
+
+
+def get_list():
+    add_extra=''
+    myElement=set()
+    while add_extra != 'exit':
+        add_extra=input('Put an element')
+        if add_extra=='exit':
+            break
+        myElement.add(add_extra)
+    myElement2=set(myElement)
+    print (myElement2)
+get_list()
