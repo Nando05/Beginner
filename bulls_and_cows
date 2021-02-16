@@ -73,3 +73,9 @@ if __name__=='__main__':
         cowlist=[]
         bullList=[]
         bullList1=[]
+
+'''To Improve on the future:
+1. Fix echo of number of cows and bulls
+2. The number entered by the user cannot be repeated
+3. The Counter for the number of attemp
+4. Comments on how the code and the functions work'''
