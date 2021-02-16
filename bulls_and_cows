@@ -1,0 +1,75 @@
+'''Randomly generate a 4-digit number. Ask the user to guess a 4-digit number.
+For every digit that the user guessed correctly in the correct place, they have a “cow”.
+For every digit the user guessed correctly in the wrong place is a “bull.”
+Every time the user makes a guess, tell them how many “cows” and “bulls” they have.
+Once the user guesses the correct number, the game is over.
+Keep track of the number of guesses the user makes throughout teh game and tell the user at the end.'''
+
+import random
+myList=[]
+cowlist=[]
+bullList=[]
+bullList1=[]
+user_number=1
+print ('Let`s play cows and bulls\n' )
+#get_data() generates an automatic 4-digits number.
+def get_data():
+    global myString
+    for i in range(4):
+        myList.append(random.randint(0,9))
+    myString="".join([str (i) for i in myList])
+    return myString
+    print('Number generated')
+
+#user_input() gets the user input and evaluates its length.
+def user_input():
+    global user_number
+    global theList
+    user_number=int(input('Please inert a for digits number: '))
+    if user_number > 9999:
+        print ('Number over 4 digits ')
+    elif user_number < 999:
+        print ('Number below 4 digits')
+    else:
+        theList= [int (x) for x in str(user_number)]
+        return user_number, theList
+
+def compare_numbers():
+    if int(myString) == int(user_number):
+        return True
+    else:
+        return False
+
+def cows_list():
+    for a in range(4):
+        if myList[a]==theList[a]:
+            cowlist.append(theList[a])
+        else:
+            bullList.append(theList[a])
+    return cowlist,bullList
+
+def bull_list():
+    for a in range(len(bullList)):
+        if bullList[a] in myList:
+            bullList1.append(bullList[a])
+    return bullList1
+
+
+if __name__=='__main__':
+    get_data()
+    #print (myString)
+    while compare_numbers()==False:
+        user_input()
+        print(user_number)
+        print(f'Your number is {user_number}')
+        if compare_numbers() == True:
+            print('Congratulations, both numbers are the same')
+            break
+        else:
+            cows_list()
+            print (f'The cows are {len(cowlist)}')
+            bull_list()
+            print (f'The bulls are {len(bullList1)}')
+        cowlist=[]
+        bullList=[]
+        bullList1=[]
