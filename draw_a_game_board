@@ -1,0 +1,32 @@
+#ask user for the input
+
+dash='---'
+pipes='|   '
+
+#ask for input0
+print ('What is going to be the size of your board? \n')
+print ('press 1 for a 3x3 board \n')
+print ('press 2 for a 9x9 board \n')
+print ('press 3 for no board \n ')
+user_choice=(input('Your choice: '))
+
+def three_by_three():
+    for i in range (3):
+        print (dash*4)
+        print (pipes*4)
+
+def nine_by_nine():
+    for i in range (9):
+        print (dash*12)
+        print (pipes*10)
+
+while user_choice!='3':
+    if user_choice=='1':
+        three_by_three()
+        break
+    elif user_choice=='2':
+        nine_by_nine()
+        break
+    else:
+        break
+print ('bye')
