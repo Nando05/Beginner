@@ -1,0 +1,16 @@
+''' Returns corresponding integer or floating-point number'''
+
+def is_a_digit():
+    global user_numberInt
+    if user_number.isdigit()==True:
+        user_numberInt=int (user_number)
+        return True
+    else:
+        print ('Is not a number')
+
+user_number=input('What is your number')
+is_a_digit()
+if is_a_digit()==True:
+    print (f'ok,{user_numberInt}')
+'''Ivonnete, si en la función is_a_digit() le digo al final que el return sea --> return True, user_numberInt
+el print que va después del llamado de la función en el condicional If no devuelve nada. Pq pasa eso?'''
