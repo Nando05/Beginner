@@ -10,12 +10,12 @@ myDate= str(date.today())
 #assignes a variable to the notification pop up message
 toaster = ToastNotifier()
 #User's input for the variables ProjectName and extension
-ProjectName = str(input('Cual es el nombre del proyect?'))
-extension = str(input('Cuál es la extensión de los archivos'))
+ProjectName = str(input('proyect?'))
+extension = str(input('file_extension'))
 #Counter to name the files
 counter = 1
 #iteration through all the objects - 1. name will act as placeholder for all the files inside de desired destination
-for name in os.listdir("C:\\Users\\jhgallego\\Folder1\\BodaCarrusel\\Boda Carrusel"):
+for name in os.listdir("<files_path>"):
     #endswith() is a python method
     if name.endswith(extension):
         print(name)
@@ -31,3 +31,4 @@ for name in os.listdir("C:\\Users\\jhgallego\\Folder1\\BodaCarrusel\\Boda Carrus
         toaster.show_toast('The old file '+name+' has been changed to '+newname)
         #print new name of the file on terminal to keep track on backend
         print (newname)
+#End Of Script
